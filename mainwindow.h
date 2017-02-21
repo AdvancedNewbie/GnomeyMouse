@@ -9,6 +9,13 @@
 #include <QSystemTrayIcon>
 #include <QCloseEvent>
 #include <QMessageBox>
+#include <QDesktopWidget>
+#include <QSettings>
+#include <QFileInfo>
+#include <QFile>
+#include <QDateTime>
+#include "aboutdialog.h"
+
 
 namespace Ui {
 class MainWindow;
@@ -22,6 +29,9 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
     void Run();
+    QIcon applicationIcon;
+    void createActions();
+    void createTrayIcon();
 
 
 private:
@@ -31,8 +41,8 @@ private:
         int x;
         int y;
     };
-    void createActions();
-    void createTrayIcon();
+    mouse myMouse;
+
 
     QAction *quitAction;
     QAction *showAction;
@@ -43,7 +53,15 @@ private:
     bool isRunning = true;
     int trigX = -352;
     int trigY = -1080;
-    int delay = 500; //ms
+    int PixelLeeway = 1; //ms
+    int delayBefore = 500; //ms
+    int delayAfter = 3000; //ms
+
+    QSettings* settings;
+
+    aboutDialog about;
+
+
 
 
 private slots:
@@ -56,6 +74,14 @@ private slots:
     void on_actionMinimize_to_tray_triggered();
 
     //void closeEvent (QCloseEvent *event);
+    void on_autoMousePush_clicked();
+
+    void on_xSpin_valueChanged(int arg1);
+    void on_ySpin_valueChanged(int arg1);
+    void on_delayBeforeSpin_valueChanged(int arg1);
+    void on_actionAbout_triggered();
+    void on_delayAfterSpin_valueChanged(int arg1);
+    void on_leewaySpin_valueChanged(int arg1);
 };
 
 #endif // MAINWINDOW_H

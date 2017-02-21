@@ -25,13 +25,20 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    SendKeys.cpp
+    SendKeys.cpp \
+    aboutdialog.cpp
 
 HEADERS  += mainwindow.h \
-    SendKeys.h
+    SendKeys.h \
+    aboutdialog.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    aboutdialog.ui
 
 DEFINES -= UNICODE
 
 CONFIG += static
+
+RC_FILE = GnomeyMouse.rc
+
+RESOURCES = GnomeyMouse.qrc

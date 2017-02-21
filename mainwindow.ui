@@ -6,9 +6,30 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>389</width>
-    <height>191</height>
+    <width>379</width>
+    <height>254</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>379</width>
+    <height>215</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>379</width>
+    <height>280</height>
+   </size>
+  </property>
+  <property name="focusPolicy">
+   <enum>Qt::WheelFocus</enum>
   </property>
   <property name="windowTitle">
    <string>GnomeyMouse</string>
@@ -17,7 +38,7 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>63</x>
+      <x>13</x>
       <y>30</y>
       <width>16</width>
       <height>21</height>
@@ -36,7 +57,7 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>63</x>
+      <x>13</x>
       <y>50</y>
       <width>16</width>
       <height>21</height>
@@ -55,7 +76,7 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>10</x>
       <y>10</y>
       <width>141</width>
       <height>16</height>
@@ -74,33 +95,33 @@
    <widget class="QLabel" name="xCurrent">
     <property name="geometry">
      <rect>
-      <x>80</x>
+      <x>30</x>
       <y>30</y>
       <width>61</width>
       <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string>0</string>
     </property>
    </widget>
    <widget class="QLabel" name="yCurrent">
     <property name="geometry">
      <rect>
-      <x>80</x>
+      <x>30</x>
       <y>50</y>
       <width>61</width>
       <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string>0</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_8">
     <property name="geometry">
      <rect>
-      <x>200</x>
+      <x>220</x>
       <y>10</y>
       <width>141</width>
       <height>16</height>
@@ -119,7 +140,7 @@
    <widget class="QSpinBox" name="xSpin">
     <property name="geometry">
      <rect>
-      <x>230</x>
+      <x>200</x>
       <y>30</y>
       <width>81</width>
       <height>22</height>
@@ -135,8 +156,8 @@
    <widget class="QSpinBox" name="ySpin">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>50</y>
+      <x>200</x>
+      <y>60</y>
       <width>81</width>
       <height>22</height>
      </rect>
@@ -151,8 +172,8 @@
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
-      <x>209</x>
-      <y>50</y>
+      <x>179</x>
+      <y>60</y>
       <width>16</width>
       <height>21</height>
      </rect>
@@ -170,7 +191,7 @@
    <widget class="QLabel" name="label_7">
     <property name="geometry">
      <rect>
-      <x>209</x>
+      <x>179</x>
       <y>30</y>
       <width>16</width>
       <height>21</height>
@@ -187,23 +208,35 @@
     </property>
    </widget>
    <widget class="QPushButton" name="setPush">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
-      <x>228</x>
-      <y>110</y>
+      <x>290</x>
+      <y>180</y>
       <width>81</width>
       <height>23</height>
      </rect>
     </property>
     <property name="text">
-     <string>Set</string>
+     <string>Save Settings</string>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+    <property name="autoDefault">
+     <bool>true</bool>
+    </property>
+    <property name="default">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QLabel" name="label_9">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>80</y>
+      <x>10</x>
+      <y>130</y>
       <width>171</width>
       <height>20</height>
      </rect>
@@ -218,11 +251,11 @@
      <string>Delay [ms] before triggering:</string>
     </property>
    </widget>
-   <widget class="QSpinBox" name="delaySpin">
+   <widget class="QSpinBox" name="delayBeforeSpin">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>80</y>
+      <x>200</x>
+      <y>130</y>
       <width>81</width>
       <height>22</height>
      </rect>
@@ -237,13 +270,104 @@
      <number>500</number>
     </property>
    </widget>
+   <widget class="QPushButton" name="autoMousePush">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>30</y>
+      <width>81</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Auto-Set 
+ Trigger Mouse 
+Position</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>160</y>
+      <width>171</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Delay [ms] after triggering:</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="delayAfterSpin">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>160</y>
+      <width>81</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>-9999</number>
+    </property>
+    <property name="maximum">
+     <number>9999</number>
+    </property>
+    <property name="value">
+     <number>3000</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>100</y>
+      <width>171</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Pixel Leeway:</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="leewaySpin">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>100</y>
+      <width>81</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>-9999</number>
+    </property>
+    <property name="maximum">
+     <number>9999</number>
+    </property>
+    <property name="value">
+     <number>1</number>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>389</width>
+     <width>379</width>
      <height>21</height>
     </rect>
    </property>
@@ -251,8 +375,9 @@
     <property name="title">
      <string>File</string>
     </property>
-    <addaction name="actionQuit"/>
+    <addaction name="actionAbout"/>
     <addaction name="actionMinimize_to_tray"/>
+    <addaction name="actionQuit"/>
    </widget>
    <addaction name="menuFile"/>
   </widget>
@@ -264,7 +389,6 @@
     <bool>false</bool>
    </attribute>
   </widget>
-  <widget class="QStatusBar" name="statusBar"/>
   <action name="actionQuit">
    <property name="text">
     <string>Quit</string>
@@ -273,6 +397,11 @@
   <action name="actionMinimize_to_tray">
    <property name="text">
     <string>Minimize to tray</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
    </property>
   </action>
  </widget>
