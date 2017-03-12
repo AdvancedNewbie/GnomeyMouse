@@ -5,4 +5,4 @@ A small Qt C++ Windows Application that sits in the tray and monitors your mouse
 
 ![GnomeyMouse](https://github.com/AdvancedNewbie/GnomeyMouse/raw/master/screenshots/Screenshot_MainWindow.png)
 
-[![GnomeyMouse](http://img.youtube.com/vi/3Heq3zntlME/0.jpg)](http://www.youtube.com/watch?v=3Heq3zntlME "GnomeyMouse")
+[![GnomeyMouse](http://img.youtube.com/vi/ff7CYUp8lNk/0.jpg)](http://www.youtube.com/watch?v=ff7CYUp8lNk "GnomeyMouse")
